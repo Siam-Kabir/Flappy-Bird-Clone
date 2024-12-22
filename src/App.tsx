@@ -58,18 +58,18 @@ function App() {
     }
   }, [gameState.score]);
 
-  useEffect(() => {
-    if (backgroundAudioRef.current) {
-      backgroundAudioRef.current.volume = 0.3;
-      backgroundAudioRef.current.play().catch(err => {
-        console.error('Background audio playback failed:', err);
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (backgroundAudioRef.current) {
+  //     backgroundAudioRef.current.volume = 0.3;
+  //     backgroundAudioRef.current.play().catch(err => {
+  //       console.error('Background audio playback failed:', err);
+  //     });
+  //   }
+  // }, []);
 
   return (
     <div className={`relative w-full h-screen overflow-hidden ${isShaking ? 'animate-screenShake' : ''}`}>
-      <audio ref={backgroundAudioRef} src="/background.mp3" loop />
+      {/* <audio ref={backgroundAudioRef} src="/background.mp3" loop /> */}
       <audio ref={crashAudioRef} src="/crash-sound.mp3" />
       <audio ref={coinAudioRef} src="/coin-sound.mp3" /> 
       <Background />
