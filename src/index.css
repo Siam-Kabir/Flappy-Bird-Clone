@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes slideGround {
+  from { background-position: 0 0; }
+  to { background-position: -336px 0; }
+}
+
+@keyframes moveCloud {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100vw); }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 1s infinite;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prevent text selection */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+}

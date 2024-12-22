@@ -1,0 +1,68 @@
+/* Game Typography System */
+
+/* Import game fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+/* Score Display */
+.score-display {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 3.5rem;
+  letter-spacing: -1px;
+  color: white;
+  text-shadow: 
+    3px 3px 0 #2d3436,
+    -1px -1px 0 #2d3436,
+    1px -1px 0 #2d3436,
+    -1px 1px 0 #2d3436,
+    1px 1px 0 #2d3436;
+}
+
+/* Game Title */
+.game-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #ffd700;
+  text-shadow: 
+    4px 4px 0 #2d3436,
+    -1px -1px 0 #2d3436,
+    1px -1px 0 #2d3436,
+    -1px 1px 0 #2d3436,
+    1px 1px 0 #2d3436;
+}
+
+/* Game Over Text */
+.game-over {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #ff4757;
+  text-shadow: 
+    3px 3px 0 #2d3436,
+    -1px -1px 0 #2d3436,
+    1px -1px 0 #2d3436,
+    -1px 1px 0 #2d3436,
+    1px 1px 0 #2d3436;
+}
+
+/* Instructions Text */
+.instructions {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Score Popup */
+.score-popup {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2rem;
+  color: #ffd700;
+  text-shadow: 
+    2px 2px 0 #2d3436,
+    -1px -1px 0 #2d3436,
+    1px -1px 0 #2d3436,
+    -1px 1px 0 #2d3436,
+    1px 1px 0 #2d3436;
+}

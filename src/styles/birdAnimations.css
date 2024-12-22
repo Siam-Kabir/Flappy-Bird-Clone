@@ -1,0 +1,17 @@
+@keyframes flapWing {
+  0% {
+    transform: rotate(15deg) scaleY(1.1);
+  }
+  100% {
+    transform: rotate(-15deg) scaleY(0.9);
+  }
+}
+
+@keyframes birdBounce {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-2px); 
+  }
+}
