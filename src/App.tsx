@@ -69,9 +69,9 @@ function App() {
 
   return (
     <div className={`relative w-full h-screen overflow-hidden ${isShaking ? 'animate-screenShake' : ''}`}>
-      <audio ref={backgroundAudioRef} src="/assets/background-music.mp3" loop />
-      <audio ref={crashAudioRef} src="/assets/crash-sound.mp3" />
-      <audio ref={coinAudioRef} src="/assets/coin-sound.mp3" /> 
+      <audio ref={backgroundAudioRef} src="/background-music.mp3" loop />
+      <audio ref={crashAudioRef} src="/crash-sound.mp3" />
+      <audio ref={coinAudioRef} src="/coin-sound.mp3" /> 
       <Background />
       <div className="relative w-full h-full">
         <Particles bird={bird} isJumping={isJumping} />
