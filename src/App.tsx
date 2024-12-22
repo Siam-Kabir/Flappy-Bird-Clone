@@ -69,7 +69,7 @@ function App() {
 
   return (
     <div className={`relative w-full h-screen overflow-hidden ${isShaking ? 'animate-screenShake' : ''}`}>
-      <audio ref={backgroundAudioRef} src="/background-music.mp3" loop />
+      <audio ref={backgroundAudioRef} src="/background.mp3" loop />
       <audio ref={crashAudioRef} src="/crash-sound.mp3" />
       <audio ref={coinAudioRef} src="/coin-sound.mp3" /> 
       <Background />
