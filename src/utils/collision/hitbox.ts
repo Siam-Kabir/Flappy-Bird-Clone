@@ -33,21 +33,21 @@ export const getPipeHitboxes = (pipe: Pipe): [Hitbox, Hitbox] => {
   const width = PIPE_CONFIG.WIDTH * HITBOX_ADJUSTMENT.PIPE.WIDTH_SCALE;
   const x = pipe.x + HITBOX_ADJUSTMENT.PIPE.X_OFFSET;
 
-  // Top pipe hitbox
-  const topPipe: Hitbox = {
-    x,
-    y: 0,
-    width,
-    height: pipe.height,
-  };
+// Top pipe hitbox
+const topPipe: Hitbox = {
+  x,
+  y: 0,
+  width,
+  height: pipe.height,
+};
 
-  // Bottom pipe hitbox
-  const bottomPipe: Hitbox = {
-    x,
-    y: pipe.height + PIPE_CONFIG.GAP,
-    width,
-    height: window.innerHeight,
-  };
+// Bottom pipe hitbox
+const bottomPipe: Hitbox = {
+  x,
+  y: pipe.height + PIPE_CONFIG.GAP,
+  width,
+  height: window.innerHeight - (pipe.height + PIPE_CONFIG.GAP) - GAME_CONFIG.CANVAS.GROUND_HEIGHT,
+};
 
-  return [topPipe, bottomPipe];
+return [topPipe, bottomPipe];
 };
