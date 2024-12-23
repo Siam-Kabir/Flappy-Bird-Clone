@@ -3,7 +3,7 @@ export const PIPE_CONFIG = {
   WIDTH: 52,
   GAP: 140,          // Increased gap for better playability
   MIN_HEIGHT: 150,   // Increased minimum height
-  MAX_HEIGHT: 400,   // Adjusted maximum height for better distribution
+  MAX_HEIGHT: 800,   // Adjusted maximum height for better distribution
   
   // Movement
   SPEED: 2.5,        // Slightly reduced for better control
