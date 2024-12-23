@@ -15,7 +15,7 @@ function App() {
   const [isJumping, setIsJumping] = useState(false);
   const [showScorePopup, setShowScorePopup] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
-  const backgroundAudioRef = useRef<HTMLAudioElement>(null);
+  // const backgroundAudioRef = useRef<HTMLAudioElement>(null);
   const crashAudioRef = useRef<HTMLAudioElement>(null);
   const coinAudioRef = useRef<HTMLAudioElement>(null);
 
