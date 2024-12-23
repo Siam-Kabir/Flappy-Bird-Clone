@@ -9,7 +9,7 @@ export const useCollisionDetection = (config: CollisionConfig) => {
     const birdHitbox = getBirdHitbox(bird);
 
     // Check floor collision
-    if (birdHitbox.y + birdHitbox.height >= window.innerHeight - GAME_CONFIG.CANVAS.GROUND_HEIGHT)  {
+    if (birdHitbox.y + birdHitbox.height >= window.innerHeight -200) {
       return true;
     }
 
