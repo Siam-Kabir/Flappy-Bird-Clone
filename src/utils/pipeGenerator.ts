@@ -13,10 +13,10 @@ const generatePipeId = (): number => ++pipeIdCounter;
  * @returns {number} The calculated height
  */
 const generateRandomHeight = (): number => {
-  return Math.round(
-    Math.random() * (PIPE_CONFIG.MAX_HEIGHT - PIPE_CONFIG.MIN_HEIGHT) + 
-    PIPE_CONFIG.MIN_HEIGHT
-  );
+  const screenHeight = window.innerHeight;
+  const minHeight = Math.floor(screenHeight * 0.1); // Minimum height as 10% of screen height
+  const maxHeight = Math.floor(screenHeight * 0.6); // Maximum height as 60% of screen height
+  return Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
 };
 
 /**
