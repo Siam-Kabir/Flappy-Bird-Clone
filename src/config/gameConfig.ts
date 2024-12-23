@@ -2,7 +2,7 @@ export const GAME_CONFIG = {
   CANVAS: {
     WIDTH: window.innerWidth,
     HEIGHT: window.innerHeight,
-    GROUND_HEIGHT: Math.floor(window.innerHeight * 0.2), // 20% of screen height
+    GROUND_HEIGHT: Math.floor(window.innerHeight * 0.25), // 20% of screen height
   },
   PHYSICS: {
     GRAVITY: 0.4,

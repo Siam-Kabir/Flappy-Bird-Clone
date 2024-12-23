@@ -1,25 +1,26 @@
 import React from 'react';
+import { GAME_CONFIG } from '../config/gameConfig';
 
 export const Background: React.FC = () => {
   return (
     <div className="absolute inset-0 bg-gradient-to-b from-[#4EC0CA] to-[#87CEEB] overflow-hidden">
       {/* Clouds */}
       <div className="absolute inset-0 opacity-70">
-        <div 
+        <div
           className="absolute w-20 h-10 bg-white rounded-full left-[10%] top-[15%]"
           style={{
             animation: 'moveCloud 25s linear infinite',
             animationDelay: '0s'
           }}
         />
-        <div 
+        <div
           className="absolute w-32 h-16 bg-white rounded-full left-[30%] top-[25%]"
           style={{
             animation: 'moveCloud 30s linear infinite',
             animationDelay: '-15s'
           }}
         />
-        <div 
+        <div
           className="absolute w-24 h-12 bg-white rounded-full left-[60%] top-[10%]"
           style={{
             animation: 'moveCloud 28s linear infinite',
@@ -44,9 +45,9 @@ export const Background: React.FC = () => {
       </div>
 
       {/* Ground */}
-      <div 
-        className="absolute bottom-0 w-full h-[20%] bg-[#DED895] border-t-[5px] border-[#523C2E]"
+      <div className="absolute bottom-0 w-full h-[25%] bg-[#DED895] border-t-[5px] border-[#523C2E]"
         style={{
+          height: `${GAME_CONFIG.CANVAS.GROUND_HEIGHT}px`,
           backgroundImage: 'url(https://raw.githubusercontent.com/sourabhv/FlapPyBird/master/assets/sprites/base.png)',
           backgroundRepeat: 'repeat-x',
           backgroundSize: 'auto 100%',
