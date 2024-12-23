@@ -1,6 +1,6 @@
-const audioCache = new Map<string, AudioBuffer>();
+// const audioCache = new Map<string, AudioBuffer>();
 
-export const playSound = async (type: 'jump' | 'score' | 'hit') => {
+export const playSound = async (type:  'score' | 'hit') => {
   try {
     const audio = new Audio(`/sounds/${type}.mp3`);
     await audio.play();
