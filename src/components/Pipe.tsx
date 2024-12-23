@@ -11,7 +11,7 @@ interface PipeProps {
 
 export const Pipe: React.FC<PipeProps> = ({ pipe, score }) => {
   const gapSize = calculateGapSize(score);
-  const bottomPipeHeight = GAME_CONFIG.CANVAS.HEIGHT - GAME_CONFIG.CANVAS.GROUND_HEIGHT - (pipe.height + gapSize);
+  const bottomPipeHeight = window.innerHeight - pipe.height - gapSize;
 
   return (
     <>
@@ -31,18 +31,20 @@ export const Pipe: React.FC<PipeProps> = ({ pipe, score }) => {
       />
       
       {/* Bottom pipe */}
-      <div
-        className="absolute"
-        style={{
-          left: `${pipe.x}px`,
-          top: `${pipe.height + gapSize}px`,
-          width: `${PIPE_CONFIG.WIDTH}px`,
-          height: `${bottomPipeHeight}px`,
-          backgroundImage: 'url(https://raw.githubusercontent.com/sourabhv/FlapPyBird/master/assets/sprites/pipe-green.png)',
-          backgroundSize: '100% auto',
-          imageRendering: 'pixelated'
-        }}
-      />
+      {/* Bottom pipe */}
+<div
+  className="absolute"
+  style={{
+    left: `${pipe.x}px`,
+    top: `${pipe.height + gapSize}px`,
+    width: `${PIPE_CONFIG.WIDTH}px`,
+    height: `${bottomPipeHeight}px`,
+    backgroundImage: 'url(https://raw.githubusercontent.com/sourabhv/FlapPyBird/master/assets/sprites/pipe-green.png)',
+    backgroundSize: '100% auto',
+    imageRendering: 'pixelated',
+    // zIndex: -1
+  }}
+/>
     </>
   );
 };

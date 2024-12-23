@@ -51,7 +51,8 @@ export const Background: React.FC = () => {
           backgroundImage: 'url(https://raw.githubusercontent.com/sourabhv/FlapPyBird/master/assets/sprites/base.png)',
           backgroundRepeat: 'repeat-x',
           backgroundSize: 'auto 100%',
-          animation: 'slideGround 2s linear infinite'
+          animation: 'slideGround 2s linear infinite',
+          zIndex: 1
         }}
       />
     </div>
