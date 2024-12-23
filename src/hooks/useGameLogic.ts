@@ -59,7 +59,7 @@ export const useGameLogic = () => {
       ...prev,
       velocity: calculateJumpVelocity(),
     }));
-    playSound('jump');
+    // playSound('jump');
   }, [gameState.isPlaying, gameState.isGameOver, initGame]);
 
   const updateGame = useCallback(() => {

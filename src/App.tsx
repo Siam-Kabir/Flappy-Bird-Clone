@@ -18,10 +18,11 @@ function App() {
   const [isAudioPlayed, setIsAudioPlayed] = useState(false);
 
   useEffect(() => {
+    const audio = new Audio(backgroundAudio);
+    audio.loop = true;
+
     const playAudio = () => {
       if (!isAudioPlayed) {
-        const audio = new Audio(backgroundAudio);
-        audio.loop = true;
         audio.play().catch(error => {
           console.log('Audio playback failed:', error);
         });
@@ -29,12 +30,18 @@ function App() {
       }
     };
 
-    window.addEventListener('click', playAudio, { once: true });
-    window.addEventListener('touchstart', playAudio, { once: true });
+    const handleUserInteraction = () => {
+      playAudio();
+      window.removeEventListener('click', handleUserInteraction);
+      window.removeEventListener('touch', handleUserInteraction);
+    };
+
+    window.addEventListener('click', handleUserInteraction);
+    window.addEventListener('touch', handleUserInteraction);
 
     return () => {
-      window.removeEventListener('click', playAudio);
-      window.removeEventListener('touchstart', playAudio);
+      window.removeEventListener('click', handleUserInteraction);
+      window.removeEventListener('touch', handleUserInteraction);
     };
   }, [isAudioPlayed]);
 
