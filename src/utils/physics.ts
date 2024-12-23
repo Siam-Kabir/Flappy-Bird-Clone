@@ -1,5 +1,5 @@
 export const PHYSICS = {
-  GRAVITY: 0.3,
+  GRAVITY: 0.8,
   JUMP_FORCE: -8.5,        // Increased from -7.2 for higher jumps
   TERMINAL_VELOCITY: 12,
   MAX_JUMP_HEIGHT: -14,    // Increased from -12 for higher maximum height
