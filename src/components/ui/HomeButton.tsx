@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 
 interface HomeButtonProps {
   onClick: () => void;
@@ -13,8 +13,8 @@ export const HomeButton: React.FC<HomeButtonProps> = ({ onClick }) => {
                  rounded-lg shadow-lg transform transition-all duration-200 
                  hover:scale-105 active:scale-95 pointer-events-auto"
     >
-      <Home className="w-6 h-6 text-[#523C2E]" />
-      <span className="font-['VT323'] text-xl text-[#523C2E]">Home</span>
+      <RefreshCw className="w-6 h-6 text-[#523C2E]" />
+      <span className="font-['VT323'] text-xl text-[#523C2E]">Retry</span>
     </button>
   );
 };
