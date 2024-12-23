@@ -1,40 +1,44 @@
-/* mobile.css */
-
-/* Base styles for mobile */
 @media (max-width: 1080px) {
-    .game-container {
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
-  
-    .score-display {
-      font-size: 2rem;
-    }
-  
-    .game-title {
-      font-size: 1.5rem;
-    }
-  
-    .game-over {
-      font-size: 1.5rem;
-    }
-  
-    .instructions {
-      font-size: 1rem;
-    }
-  
-    .bird {
-      width: 40px;
-      height: 30px;
-    }
-  
-    .pipe {
-      width: 40px;
-      z-index: 1;
-    }
-  
-    .ground {
-      height: 15%;
-    }
+  .game-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
   }
+
+  .score-display {
+    font-size: 2rem;
+  }
+
+  .game-title {
+    font-size: 1.5rem;
+  }
+
+  .game-over {
+    font-size: 1.5rem;
+  }
+
+  .instructions {
+    font-size: 1rem;
+  }
+
+  .bird {
+    width: 40px;
+    height: 30px;
+  }
+
+  .pipe {
+    
+    width: 40px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0; /* Ensure the pipe touches the ground */
+  }
+
+  .ground {
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
