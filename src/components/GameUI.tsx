@@ -37,7 +37,7 @@ export const GameUI: React.FC<GameUIProps> = ({ gameState }) => {
 
       {/* Game Over Screen */}
       {gameState.isGameOver && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
           <h2 className="game-over mb-8">
             GAME OVER
           </h2>
