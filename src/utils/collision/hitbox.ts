@@ -2,7 +2,7 @@ import { Hitbox } from './types';
 import { Bird, Pipe } from '../../types/game';
 import { BIRD_CONFIG } from '../../config/birdConfig';
 import { PIPE_CONFIG } from '../../config/pipeConfig';
-
+import { GAME_CONFIG } from '../../config/gameConfig';
 // Constants for fine-tuning hitbox sizes
 const HITBOX_ADJUSTMENT = {
   BIRD: {
