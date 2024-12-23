@@ -21,14 +21,16 @@ function App() {
     const playAudio = () => {
       if (!isAudioPlayed) {
         const audio = new Audio(backgroundAudio);
-        audio.loop =true;
-        audio.play();
+        audio.loop = true;
+        audio.play().catch(error => {
+          console.log('Audio playback failed:', error);
+        });
         setIsAudioPlayed(true);
       }
     };
 
-    window.addEventListener('click', playAudio);
-    window.addEventListener('touchstart', playAudio);
+    window.addEventListener('click', playAudio, { once: true });
+    window.addEventListener('touchstart', playAudio, { once: true });
 
     return () => {
       window.removeEventListener('click', playAudio);
