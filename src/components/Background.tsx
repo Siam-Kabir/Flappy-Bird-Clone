@@ -47,7 +47,7 @@ export const Background: React.FC = () => {
       {/* Ground */}
       <div className="absolute bottom-0 w-full h-[25%] bg-[#DED895] border-t-[5px] border-[#523C2E]"
         style={{
-          height: `${GAME_CONFIG.CANVAS.GROUND_HEIGHT}px`,
+          height: window.innerHeight * 0.25,
           backgroundImage: 'url(https://raw.githubusercontent.com/sourabhv/FlapPyBird/master/assets/sprites/base.png)',
           backgroundRepeat: 'repeat-x',
           backgroundSize: 'auto 100%',
