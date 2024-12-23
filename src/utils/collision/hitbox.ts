@@ -46,7 +46,7 @@ const bottomPipe: Hitbox = {
   x,
   y: pipe.height + PIPE_CONFIG.GAP,
   width,
-  height: window.innerHeight - (pipe.height + PIPE_CONFIG.GAP) - GAME_CONFIG.CANVAS.GROUND_HEIGHT,
+  height: window.innerHeight - (pipe.height + PIPE_CONFIG.GAP),
 };
 
 return [topPipe, bottomPipe];
