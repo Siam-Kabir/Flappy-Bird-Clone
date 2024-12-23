@@ -21,6 +21,7 @@ function App() {
     const playAudio = () => {
       if (!isAudioPlayed) {
         const audio = new Audio(backgroundAudio);
+        audio.loop =true;
         audio.play();
         setIsAudioPlayed(true);
       }
